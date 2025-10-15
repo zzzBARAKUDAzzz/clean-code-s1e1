@@ -4,34 +4,34 @@ body {
     color: #333;
     font-family: Lato, sans-serif;
 }
-.aaa {
+.matrix-section {
     width: 500px;
     margin: 0 auto;
     display: block;
     text-align: right;
 }
-.aaa img {
+.matrix-section  img {
     width: 100%;
 }
-.aaa .more_inf {
+.matrix-section__link {
     font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-.aaa { text-align: center;
+.matrix-section { text-align: center;
 }
 }
-.centered-main-page-element {
+.todo-app {
     display: block;
     width: 500px;
     margin: 0 auto 0;
 }
-.task {
+.task-form__input {
     width: 56%;
     display: inline-block;
     flex-grow: 1
 }
-.task-row-wrapper {
+.task-form {
     display: flex;
 }
 ul {
@@ -44,7 +44,7 @@ li, h3 {
 input,button{
     outline:none;
 }
-button {
+task-form__button {
     background: none;
     border: 0px;
     color: #888;
@@ -53,7 +53,7 @@ button {
     font-family: Lato, sans-serif;
     cursor: pointer;
 }
-button:hover {
+task-form__button:hover {
     color: #3a3A3a;
 }
 /* Heading */
@@ -115,7 +115,7 @@ li > label {
     font-size: 18px;
     width: 226px;
 }
-li >    input[type="text"] {
+li > task-form__input {
     width: 226px
 }
 button.delete img {
