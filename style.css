@@ -44,7 +44,7 @@ li, h3 {
 input,button{
     outline:none;
 }
-task-form__button {
+.task-form__button {
     background: none;
     border: 0px;
     color: #888;
@@ -53,7 +53,7 @@ task-form__button {
     font-family: Lato, sans-serif;
     cursor: pointer;
 }
-task-form__button:hover {
+.task-form__button:hover {
     color: #3a3A3a;
 }
 /* Heading */
@@ -115,7 +115,7 @@ li > label {
     font-size: 18px;
     width: 226px;
 }
-li > task-form__input {
+li > .task-form__input {
     width: 226px
 }
 button.delete img {
