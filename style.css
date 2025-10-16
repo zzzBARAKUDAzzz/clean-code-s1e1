@@ -29,7 +29,7 @@ body {
 .task-form__input {
     width: 56%;
     display: inline-block;
-    flex-grow: 1
+    flex-grow: 1;  /* ← ДОБАВЛЕНА ; */
 }
 .task-form {
     display: flex;
@@ -116,7 +116,7 @@ li > label {
     width: 226px;
 }
 li > .task-form__input {
-    width: 226px
+    width: 226px;
 }
 .task-item__delete img {
     height: 2em;
@@ -129,18 +129,18 @@ li > .task-form__input {
 
 /* Completed */
 .task-list--completed .task-item__label {
-    text-decoration: line-through
+    text-decoration: line-through;  /* ← ДОБАВЛЕНА ; */
     color: #888;
 }
 
 /* Edit Task */
 .task-item__input{
-    display:none
+    display:none;
 }
 
 .task-item--edit .task-item__input {
     display:inline-block;
-    width:224px
+    width:224px;
 }
 
 .task-item--edit .task-item__label {
