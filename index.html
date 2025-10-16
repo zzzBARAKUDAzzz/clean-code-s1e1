@@ -10,7 +10,7 @@
 <aside class="matrix-section"><img src="./eisenhower-matrix.jpg" alt="Eisenhower Matrix"><a class='matrix-section__link' href="https://goal-life.com/page/method/matrix-eisenhower">Want more details&quest;</a></aside>
 <main class="todo-app"><section id='topSectionForAddingElementToList'><label for="new-task">Add Item</label><div class="task-form"><input id='new-task'class="task-form__input" type="text"><button type="button"class="task-form__button">Add</button></div>
 </section><h3>Todo</h3>
-<ul id='incompleteTasks'>
+<ul id='incomplete-tasks'>
 <li class="task-item">
   <input type='checkbox' class="task-item__checkbox">
   <label class="task-item__label">Pay Bills</label>
@@ -18,8 +18,19 @@
   <button type="button" class="task-item__edit">Edit</button>
   <button type="button" class="task-item__delete"><img src="./remove.svg" alt="Delete"></button>
 </li>
-<li class="editMode"><input type="checkbox"><label class="task">Go Shopping</label><input type="text" value="Go Shopping" class="task"><button type="button" class='edit'>Save</button><button type="button" class="delete"><img src="./remove.svg" alt="Delete"></button></li>
-</ul><h3>Completed</h3><ul id="completed-tasks"><li><input type="checkbox" checked><label class="task">See the Doctor</label><input type="text" class="task"><button type="button" class="edit">Edit</button><button type="button" class="delete"><img src="./remove.svg" alt="Delete"></button>
+<li class="task-item task-item--edit">
+  <input type="checkbox" class="task-item__checkbox">
+  <label class="task-item__label">Go Shopping</label>
+  <input type="text" value="Go Shopping" class="task-item__input">
+  <button type="button" class="task-item__edit">Save</button>
+  <button type="button" class="task-item__delete"><img src="./remove.svg" alt="Delete"></button>
+</li>
+</ul><h3>Completed</h3><ul id="completed-tasks"><li class="task-item">
+  <input type="checkbox" checked class="task-item__checkbox">
+  <label class="task-item__label">See the Doctor</label>
+  <input type="text" class="task-item__input">
+  <button type="button" class="task-item__edit">Edit</button>
+  <button type="button" class="task-item__delete"><img src="./remove.svg" alt="Delete"></button>
 </li>
 </ul>
 </main>

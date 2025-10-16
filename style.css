@@ -29,7 +29,7 @@ body {
 .task-form__input {
     width: 56%;
     display: inline-block;
-    flex-grow: 1;  /* ← ДОБАВЛЕНА ; */
+    flex-grow: 1;
 }
 .task-form {
     display: flex;
@@ -93,29 +93,28 @@ input#new-task {
 }
 
 /* Task list */
-li {
+.task-item {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-li > * {
+.task-item > * {
     vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.task-item__checkbox {
     margin: 0 10px;
 }
-li > label {
+.task-item__label {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
     width: 226px;
 }
-li > .task-form__input {
+.task-item__input {
     width: 226px;
 }
 .task-item__delete img {
@@ -129,7 +128,7 @@ li > .task-form__input {
 
 /* Completed */
 .task-list--completed .task-item__label {
-    text-decoration: line-through;  /* ← ДОБАВЛЕНА ; */
+    text-decoration: line-through;
     color: #888;
 }
 
