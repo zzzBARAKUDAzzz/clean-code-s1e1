@@ -13,6 +13,13 @@ var addButton = document.getElementsByTagName("button")[0];
 var incompleteTaskHolder = document.getElementById("incomplete-tasks");//ul of #incompleteTasks
 var completedTasksHolder = document.getElementById("completed-tasks");//completed-tasks
 
+// Константы для замены магических строк
+var BUTTON_EDIT_TEXT = "Edit";
+var BUTTON_SAVE_TEXT = "Save";
+var DELETE_ICON_SRC = './remove.svg';
+var DELETE_ICON_ALT = 'Delete';
+var TASK_ITEM_EDIT_CLASS = "task-item--edit";
+
 
 //New task list item
 // Вместо большой функции createNewTaskElement - добавляем маленькие функции:
@@ -39,7 +46,7 @@ var createEditInputElement = function() {
 
 var createEditButtonElement = function() {
     var editButton = document.createElement("button");
-    editButton.innerText = "Edit";
+    editButton.innerText = BUTTON_EDIT_TEXT;
     editButton.className = "task-item__edit";
     editButton.type = "button";
     return editButton;
@@ -50,8 +57,8 @@ var createDeleteButtonElement = function() {
     var deleteButtonImg = document.createElement("img");
     deleteButton.className = "task-item__delete";
     deleteButton.type = "button";
-    deleteButtonImg.src = './remove.svg';
-    deleteButtonImg.alt = 'Delete';
+    deleteButtonImg.src = DELETE_ICON_SRC;
+    deleteButtonImg.alt = DELETE_ICON_ALT;
     deleteButton.appendChild(deleteButtonImg);
     return deleteButton;
 };
@@ -96,22 +103,22 @@ var editTask=function(){
 
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
-var editBtn=listItem.querySelector(".task-item__edit");
-var containsClass=listItem.classList.contains("task-item--edit");
+    var editBtn=listItem.querySelector(".task-item__edit");
+    var containsClass=listItem.classList.contains(TASK_ITEM_EDIT_CLASS);
     //If class of the parent is .editmode
     if(containsClass){
 
         //switch to .editmode
         //label becomes the inputs value.
         label.innerText=editInput.value;
-        editBtn.innerText="Edit";
+        editBtn.innerText = BUTTON_EDIT_TEXT;
     }else{
         editInput.value=label.innerText;
-        editBtn.innerText="Save";
+        editBtn.innerText = BUTTON_SAVE_TEXT;
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("task-item--edit");
+    listItem.classList.toggle(TASK_ITEM_EDIT_CLASS);
 };
 
 
@@ -168,8 +175,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
-var editButton=taskListItem.querySelector(".task-item__edit");
-var deleteButton=taskListItem.querySelector(".task-item__delete");
+    var editButton=taskListItem.querySelector(".task-item__edit");
+    var deleteButton=taskListItem.querySelector(".task-item__delete");
 
 
     //Bind editTask to edit button.
